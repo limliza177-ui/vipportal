@@ -249,19 +249,7 @@
   </div>
 
   <script>
-    // Simple redirect handler — change the data-href attribute to your real portal URL
-    (function(){
-      const btn = document.getElementById('enterBtn');
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        const url = btn.getAttribute('data-href') || '#';
-        // open in new tab to avoid immediate policy scanning redirects if desired
-        window.open(url, '_blank', 'noopener');
-      });
-
-      // set year automatically
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
+   
 
     const sites = [
       "https://mel77.com",
