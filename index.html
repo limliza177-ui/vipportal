@@ -231,7 +231,7 @@
           <p class="muted-note">This portal is for members 18+ only. Membership opens the door to exclusive experiences.</p>
 
           <div class="cta-area" style="width:100%;margin-top:12px">
-            <a id="enterBtn" class="enter-btn" href="#" role="button" aria-label="Enter VIP Portal" data-href="https://your-domain.example/enter">Enter VIP Portal</a>
+            <a class="enter-btn" href="#" onclick="goRandom()">Enter VIP Portal</a>
             <p style="margin:0;color:var(--muted);font-size:13px;text-align:center;">Private • Premium • Invite-style access</p>
           </div>
 
@@ -249,20 +249,16 @@
   </div>
 
   <script>
-    // Simple redirect handler — change the data-href attribute to your real portal URL
-    (function(){
-      const btn = document.getElementById('enterBtn');
-      btn.addEventListener('click', function(e){
-        e.preventDefault();
-        const url = btn.getAttribute('data-href') || '#';
-        // open in new tab to avoid immediate policy scanning redirects if desired
-        window.open(url, '_blank', 'noopener');
-      });
+function goRandom() {
+    // Put your 3 URLs here
+    const sites = [
+        "https://mel77.com",
+        "https://skygold98.com",
+        "https://victoria77au.com"
+    ];;
+    window.location.href = sites[Math.floor(Math.random() * sites.length)];
+}
 
-      // set year automatically
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
   </script>
 </body>
 </html>
-
